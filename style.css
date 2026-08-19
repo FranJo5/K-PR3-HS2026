@@ -1,0 +1,29 @@
+/*Grid Anlegen
+main kommt ins Grid, sodass Kinderelemente(sections) aufgeteilt werden*/
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/*Überschriften formatieren mit Tagselektor*/
+h1,h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*Schriftarten mit Fallback anlegen */
+}
+
+/*paragraph stylen*/
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Gang-Name formatieren* mit Klassenselektor*/
+.gang-name{
+    text-transform: uppercase; /*Großbuchstaben*/
+    letter-spacing: 1px; /*Platz zwischen Buchstaben*/
+}
+
+.gang-beschreibung{
+    font-style: italic; /*kursiv*/
+}
+
