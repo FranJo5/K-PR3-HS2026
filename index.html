@@ -14,64 +14,136 @@
     <p>Nora Vidal</p>
    </header>
 
-   <main>
-    <section id="M-01">
-        <h2>Gesammelt</h2>
-        <p>M-01</p>
-        <ol>
-            <li>
-                <p class="gang-name">Wildkräutersalat</p>
-                <p class="gang-beschreibung">mit Löwenzahn und Sauerampfer</p>
-            </li>
-            <li>
-                <p class="gang-name">Waldpilzrisotto</p>
-                <p class="gang-beschreibung">mit Steinpilzen und Pfifferlingen</p>
-            </li>
-            <li>
-                <p class="gang-name">Wildbeeren-Kompott</p>
-                <p class="gang-beschreibung">mit Brombeeren und Heidelbeeren</p>
-            </li>
-        </ol>
-    </section>
-
-    <section id="M-02">
-        <h2>Fermentiert</h2>
-        <p>M-02</p>
-        <ol>
-            <li>
-                <p class="gang-name">Fermentiertes Gemüse</p>
-                <p class="gang-beschreibung">Kimchi-Style</p>
-            </li>
-            <li>
-                <p class="gang-name">Miso-glasiertes Gemüse</p>
-                <p class="gang-beschreibung">mit gebratenem Gemüse der Saison</p>
-            </li>
-            <li>
-                <p class="gang-name">Kombucha-Sorbet</p>
-                <p class="gang-beschreibung">mit frischer Minze</p>
-            </li>
-        </ol>
-    </section>
-
-    <section id="M-03">
-        <h2>Gereift</h2>
-        <p>M-03</p>
-        <ol>
-            <li>
-                <p class="gang-name">Birnen-Walnuss-Salat</p>
-                <p class="gang-beschreibung">mit gereiftem Balsamico</p>
-            </li>
-            <li>
-                <p class="gang-name">Dry-Aged-Rind</p>
-                <p class="gang-beschreibung">mit Röstgemüse</p>
-            </li>
-            <li>
-                <p class="gang-name">Käseteller</p>
-                <p class="gang-beschreibung">mit Feigen und Walnüssen</p>
-            </li>
-        </ol>
-    </section>
-
-   </main>
+ 
+    <main>
+          <!--Menüauswahl-->
+              <section id="M-01">
+                  <h2>Gesammelt</h2>
+                  <p>M-01</p>
+                  <ol>
+                      <li>
+                          <p class="gang-name">Wildkräutersalat</p>
+                          <p class="gang-beschreibung">mit Löwenzahn und Sauerampfer</p>
+                      </li>
+                      <li>
+                          <p class="gang-name">Waldpilzrisotto</p>
+                          <p class="gang-beschreibung">mit Steinpilzen und Pfifferlingen</p>
+                      </li>
+                      <li>
+                          <p class="gang-name">Wildbeeren-Kompott</p>
+                          <p class="gang-beschreibung">mit Brombeeren und Heidelbeeren</p>
+                      </li>
+                  </ol>
+              </section>
+      
+              <section id="M-02">
+                  <h2>Fermentiert</h2>
+                  <p>M-02</p>
+                  <ol>
+                      <li>
+                          <p class="gang-name">Fermentiertes Gemüse</p>
+                          <p class="gang-beschreibung">Kimchi-Style</p>
+                      </li>
+                      <li>
+                          <p class="gang-name">Miso-glasiertes Gemüse</p>
+                          <p class="gang-beschreibung">mit gebratenem Gemüse der Saison</p>
+                      </li>
+                      <li>
+                          <p class="gang-name">Kombucha-Sorbet</p>
+                          <p class="gang-beschreibung">mit frischer Minze</p>
+                      </li>
+                  </ol>
+              </section>
+      
+              <section id="M-03">
+                  <h2>Gereift</h2>
+                  <p>M-03</p>
+                  <ol>
+                      <li>
+                          <p class="gang-name">Birnen-Walnuss-Salat</p>
+                          <p class="gang-beschreibung">mit gereiftem Balsamico</p>
+                      </li>
+                      <li>
+                          <p class="gang-name">Dry-Aged-Rind</p>
+                          <p class="gang-beschreibung">mit Röstgemüse</p>
+                      </li>
+                      <li>
+                          <p class="gang-name">Käseteller</p>
+                          <p class="gang-beschreibung">mit Feigen und Walnüssen</p>
+                      </li>
+                  </ol>
+              </section>
+              
+        <!--Formular-->
+        <form action="menueauswahl.php" method="post">
+    
+            <h2>Anmeldung</h2>
+    
+            <div class="name-grid">
+                <!--Nachname-->
+                <label for="nachname">Nachname:</label>
+                <input type="text" name="nachname" id="nachname">
+    
+                <!--Vorname-->
+                <label for="vorname">Vorname:</label>
+                <input type="text" name="vorname" id="vorname">
+            </div>
+                
+            <!--Menüauswahl-->
+            <h4>Menüauswahl</h4>
+            
+            <input type="radio" name="auswahl" id="radio-M-01">
+            <label for="radio-M-01">Gesammelt</label>
+    
+            <input type="radio" name="auswahl" id="radio-M-02">
+            <label for="radio-M-02">Fermentiert</label>
+    
+            <input type="radio" name="auswahl" id="radio-M-03">
+            <label for="radio-M-03">Gereift</label>
+            
+            <input type="radio" name="auswahl" id="radio-M-00">
+            <label for="radio-M-00">keines der Menüs</label>
+    
+            <!--Ernährungsbesonderheiten-->
+            <h4>Ernährungsbesonderheiten</h4>
+            <ul class="checkbox-ul">
+                <li>
+                    <input type="checkbox" name="vegan" id="vegan">
+                    <label for="vegan">vegan</label>
+                </li>
+    
+                <li>
+                    <input type="checkbox" name="vegetarisch" id="vegetarisch">
+                    <label for="vegetarisch">vegetarisch</label>
+                </li>
+    
+                <li>
+                    <input type="checkbox" name="laktosefrei" id="laktosefrei">
+                    <label for="laktosefrei">laktosefrei</label>
+                </li>
+    
+                <li>
+                    <input type="checkbox" name="glutenfrei" id="glutenfrei">
+                    <label for="glutenfrei">glutenfrei</label>
+                </li>
+    
+                <li>
+                    <input type="checkbox" name="zuckerfrei" id="zuckerfrei">
+                    <label for="zuckerfrei">zuckerfrei</label>
+                </li>
+    
+                <li>
+                    <label for="sonstiges">Sonstiges:</label>
+                    <input type="text" name="sonstiges" id="sonstiges">
+                </li>
+            </ul>
+            
+            <label for="wuensche">Weitere Wünsche:</label>
+            <input type="text" name="wuensche" id="wuensche">
+    
+            <input type="submit" value="Absenden">
+    
+        </form>
+    </main>
 </body>
 </html>

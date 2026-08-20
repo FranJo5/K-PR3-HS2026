@@ -1,10 +1,15 @@
 /*Grid Anlegen
 main kommt ins Grid, sodass Kinderelemente(sections) aufgeteilt werden*/
 
+header{
+    text-align: center;
+    padding-bottom: 40px;
+}
 main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 60px;
+    padding-bottom: 100px;
 }
 
 /*Überschriften formatieren mit Tagselektor*/
@@ -27,3 +32,35 @@ p{
     font-style: italic; /*kursiv*/
 }
 
+/*Form formatierung*/
+form{
+    grid-column: 2 / 3;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+form h2{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.name-grid{
+    display: grid;
+    grid-template-columns: max-content 300px; /*max-content: so lang wie inhalt*/
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.checkbox-ul{
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0px;
+    padding-bottom: 5px;
+}
+
+.checkbox-ul li{
+    margin-bottom: 5px;
+}
+
+/*Body Formatierung*/
+body{
+    padding-left: 10px;
+}
