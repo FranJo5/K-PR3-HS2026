@@ -1,4 +1,5 @@
 <?php
+// Franziska Hampe | Matrikel-Nr. 1152767 | KÜ Programmierung 3 | Abgabe: 29.08.2026
 //Auslesen
 //Name
 $nachname = $_POST["nachname"];
@@ -54,13 +55,22 @@ $sonstiges = $_POST["sonstiges"];
 $wuensche = $_POST["wuensche"];
 
 //E-Mail Text zusammenbauen
-$mail = "Nachname: " . $nachname . "\n";
-$mail = $mail . "Vorname: " . $vorname . "\n";
-$mail = $mail . "Menüauswahl: " . $menue . "\n";
-$mail = $mail . "Ernährungsbesonderheiten: " . $besonderheiten . "\n";
-$mail = $mail . "Sonstiges: " . $sonstiges . "\n";
-$mail = $mail . "Weitere Wünsche: " . $wuensche . "\n";
+$mailmessage = "Nachname: " . $nachname . "\n";
+$mailmessage = $mailmessage . "Vorname: " . $vorname . "\n";
+$mailmessage = $mailmessage . "Menüauswahl: " . $menue . "\n";
+$mailmessage = $mailmessage . "Ernährungsbesonderheiten: " . $besonderheiten . "\n";
+$mailmessage = $mailmessage . "Sonstiges: " . $sonstiges . "\n";
+$mailmessage = $mailmessage . "Weitere Wünsche: " . $wuensche . "\n";
 
-//Test
-echo $mail
+//Mail-Variablen
+$empfaenger = "test@auftraggeberin.de";
+$betreff = "Neue Menüanmeldung - Methodik des Geschmacks";
+
+//Mail abschicken
+if (mail($empfaenger, $betreff, $mailmessage)) {
+    echo "Mail wurde verschickt.";
+} else {
+    echo "Mail konnte nicht verschickt werden.";
+}
+
 ?>
